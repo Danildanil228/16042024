@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(14, 0, 0);
+    overflow: hidden;
+}
+.letter {
+    position: absolute;
+    color: white;
+    font-size: 15px; 
+}
+  
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#start-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 40px;
+    font-size: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+    visibility: visible;
+}
+#start-button:hover{
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 60px 20px rgba(255, 255, 255, 0.2);
+}
+
+#close-button{
+    margin-bottom: 20px;
+    display: flex;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 460px;
+}
+
+.dialog-window{
+    visibility: hidden;
+}
+
+.calc-app{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    background: white;
+    padding: 100vh 100vw;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    background: rgba(240, 10, 10, 0.01);
+    
+    .show-nums{
+        color: white;
+        background-color: black;
+        padding: 20px;
+        width: 500px;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+
+    .nums-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        gap: 15px;
+        margin-top: 30px;
+
+        .nums{
+            padding: 30px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    
+        .equally{
+            padding: 27px;
+        }
+
+        .clear{
+            padding: 27px;
+        }
+    }
+
+    .app-description{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        opacity: 80%;
+    }
+}
+.background-app{
+    background-color: white;
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    background: rgb(172, 167, 167);
+    backdrop-filter: blur(10px);
+}
